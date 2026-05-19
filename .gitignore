@@ -1,0 +1,32 @@
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv
+
+# Pycache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Streamlit
+.streamlit/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Entorno local
+.env
+.env.local
