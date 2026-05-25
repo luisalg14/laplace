@@ -30,12 +30,12 @@ st.title("📱 Simulador de Propagación de Información en Redes Sociales")
 st.markdown("### Usando la Transformada de Laplace para modelar dinámicas de propagación")
 
 # Crear tabs principales
-tab1, tab2, tab3 = st.tabs(["🎯 Simulador", "📚 Teoría Matemática", "ℹ️ Acerca de"])
+tab_acerca, tab_teoria, tab_simulador = st.tabs(["ℹ️ Acerca de", "📚 Teoría Matemática", "🎯 Simulador"])
 
 # ============================================================================
 # TAB 1: SIMULADOR
 # ============================================================================
-with tab1:
+with tab_simulador:
     st.header("Herramienta Interactiva de Simulación")
     
     # Dividir en dos columnas
@@ -46,7 +46,7 @@ with tab1:
         
         # Entrada de parámetros
         N0 = st.number_input(
-            "Alcance Inicial (N₀)",
+            "Alcance inicial: N₀ (personas que ven la publicación al inicio)",
             min_value=1,
             max_value=10000,
             value=100,
@@ -55,7 +55,7 @@ with tab1:
         )
         
         Nmax = st.number_input(
-            "Alcance Máximo (Nmax)",
+            "Alcance máximo: Nmax (total máximo de personas que podrían verla)",
             min_value=N0 + 1,
             max_value=100000,
             value=10000,
@@ -64,7 +64,7 @@ with tab1:
         )
         
         k = st.slider(
-            "Velocidad de Propagación (k)",
+            "Velocidad de propagación: k (qué tan rápido se comparte)",
             min_value=0.01,
             max_value=1.0,
             value=0.1,
@@ -278,7 +278,7 @@ with tab1:
 # ============================================================================
 # TAB 2: TEORÍA MATEMÁTICA
 # ============================================================================
-with tab2:
+with tab_teoria:
     st.header("📚 Fundamentos Matemáticos")
     
     col1, col2 = st.columns([1, 1], gap="large")
@@ -421,7 +421,7 @@ with tab2:
 # ============================================================================
 # TAB 3: ACERCA DE
 # ============================================================================
-with tab3:
+with tab_acerca:
     st.header("ℹ️ Acerca de este Proyecto")
     
     st.markdown("""
